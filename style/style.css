@@ -1,0 +1,39 @@
+:root {
+
+  /* Amarrillo botones */
+  --color-secondary: #FFCA02;
+  /* Fondo de la página */
+  --color-background-main: #ffffff;
+  /* Azul footer y barra debajo header */
+  --color-background-footer: #3A5DA9;
+  /* Colores de texto */
+  --color-text-dark: #111;
+  --color-text-light: #ffffff;
+
+}
+
+/* ======================================= */
+/* 3. FOOTER */
+/* ======================================= */
+footer {
+  background-color: var(--color-background-footer);
+  color: var(--color-text-light);
+  display: block;
+}
+#footer__logo img{
+  height: 80px;
+  /* Ajuste del logo */
+  width: auto;
+  
+}
+#tittle__footer {
+  font-style: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+#footer__copyright {
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 1.2em;
+}
