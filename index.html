@@ -5,37 +5,55 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 <!--CONTENEDOR PRINCIPAL-->
 
 <!-- container-fluid elimina los márgenes laterales del contenedor -->
-<div class="container-fluid text-center p-0">
+<div class="container-fluid text-center p-0 bg-primary">
 
     <!-- HEADER -->
-    <!-- g-0 elimina el espaciado (padding) interno de las columnas -->
     <div class="row g-0">
         <div class="col-12 bg-success">
-            Encabezado
+            <img src="img/bannerPokemon.jpg" class="img-fluid banner" alt="bannerPokemon">
         </div>
+
     </div>
+
+    <!-- NAV LARGO Y FINO -->
+    <nav class="container ">
+        <div class="row justify-content-center m-3">
+            <div class="col-md-6">
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input class="form-control form-control-lg search-bar" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn px-4 search-bar bg-white"  type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
 
     <!-- PRINCIPALES -->
     <div class="row g-0">
-        <div class="col-3 bg-dark ">
+        <div class="col-3 bg-dark text-white">
             Columna Izquierda
         </div>
-        <div class="col-6 bg-primary ">
+        <div class="col-6 bg-warning"> <!-- Cambiado a amarillo para imitar el fondo de la consola de tu ejemplo -->
             Contenido Principal
         </div>
-        <div class="col-3 ">
+        <div class="col-3 bg-dark text-white">
             Barra Lateral
         </div>
     </div>
 
     <!-- FOOTER -->
     <div class="row g-0">
-        <div class="col-12 bg-secondary  p-3">
+        <div class="col-12 bg-secondary p-3">
             (Footer)
         </div>
     </div>

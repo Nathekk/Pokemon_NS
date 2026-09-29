@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../font/pokemon.ttf') format('truetype');
+}
+
+body, *, .navbar-brand, .form-control, .btn {
+    font-family: 'Pokemon', sans-serif !important;
+}
+
+.banner {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+    object-position: 30% 80%;
+}
+.search-bar{
+    border-radius: 40px;
+}
