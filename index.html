@@ -12,7 +12,7 @@
 <!--CONTENEDOR PRINCIPAL-->
 
 <!-- container-fluid elimina los márgenes laterales del contenedor -->
-<div class="container-fluid text-center p-0 bg-primary">
+<div class="container-fluid text-center p-0"  id="headerNavbar">
 
     <!-- HEADER -->
     <div class="row g-0">
@@ -23,8 +23,8 @@
     </div>
 
     <!-- NAV LARGO Y FINO -->
-    <nav class="container ">
-        <div class="row justify-content-center m-3">
+    <nav class="container " >
+        <div class="row justify-content-center m-3" >
             <div class="col-md-6">
                 <form class="d-flex">
                     <div class="input-group">
@@ -40,15 +40,77 @@
 
     <!-- PRINCIPALES -->
     <div class="row g-0">
+        <!--Columna Izq-->
         <div class="col-3 bg-dark text-white">
             Columna Izquierda
         </div>
-        <div class="col-6 bg-warning"> <!-- Cambiado a amarillo para imitar el fondo de la consola de tu ejemplo -->
+        <!--FIN Columna Izquierda-->
+
+        <!--Contenido principal-->
+        <div class="col-7 bg-warning"> <!-- Cambiado a amarillo para imitar el fondo de la consola de tu ejemplo -->
             Contenido Principal
         </div>
-        <div class="col-3 bg-dark text-white">
-            Barra Lateral
+        <!--FIN contenido principal-->
+
+        <!--SIDEBAR-->
+        <div class="col-2 bg-white" id="sidebar">
+
+            <!--Comunidad-->
+            <div class="row pt-4 m-0 justify-content-center">
+                <div class="col-10 mb-4" id="comunidad">
+                    <div class="pt-2 mt-2">
+                        <h2>Comunidad</h2>
+                    </div>
+                    <ul class="text-start">
+                        <li>
+                            <img src="./img/pikachu.png" alt="perfilPikachu"> Pikachu
+                        </li>
+                        <li>
+                            <img src="./img/charmander.png" alt="perfilPikachu"> Charmander
+                        </li>
+                    </ul>
+                    <div class="pb-2 mb-2">
+                        <button type="button" class="btn btn-primary">Unete</button>
+                    </div>
+                </div>
+            </div>
+            <!--Fin comunidad-->
+
+            <!--Noticias-->
+            <div class="row pt-4 m-0 mb-4 justify-content-center">
+                <div class="col-10 mb-4 pb-2" id="noticias">
+                    <div class="pt-2 mt-2">
+                        <h2>Noticias</h2>
+                    </div>
+                    <form class="d-flex gap-1"> 
+                        <div class="mb-2">
+                            <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                        </div>
+                        <div class="mb-2">
+                            <button type="button" class="btn btn-primary">Suscribir</button>
+                        </div>
+                    </form>
+                    <!--Noticia pokopia-->
+                    <a href="https://www.pokemon.com/es/noticias/musica-de-pokemon-pokopia-para-estudiar-y-relajarse" target="_blank" class="text-decoration-none">
+                        <div class="card mb-3">
+                            <img src="./img/noticia-pokopia.avif" class="card-img-top" alt="Pokémon Pokopia">
+
+                            <div class="card-body text-start">
+                                <h5 class="card-title">Música de Pokémon Pokopia para estudiar y relajarse</h5>
+                                <p class="card-text">
+                                    Disfruta de una hora de música de Pokémon Pokopia pensada para estudiar, 
+                                    relajarte y desconectar.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!--Fin noticia pokopia-->
+                </div>
+            </div>
+            <!--Fin noticias-->
+
         </div>
+        <!--FIN SIDEBAR-->
     </div>
 
     <!--FOOTER-->
@@ -60,12 +122,12 @@
                     <h4 id="tittle__footer"> FOLLOW POKEMON</h4>
                 </div>
                 <div id="footer__iconos" class="d-inline-flex justify-content-center gap-3 mb-4 mt-2 me-4">
-                    <a href="https://twitter.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/twitter-x.svg">
+                    <a href="https://x.com/Pokemon_ES_ESP" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./img/twitter-x.svg">
                     </a>
-                    <a href="https://www.instagram.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/instagram (1).svg"></a>
-                    <a href="https://www.facebook.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/facebook.svg"></a>
-                    <a href="https://www.youtube.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/youtube.svg"></a>
-                    <a href="https://discord.gg/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/discord.svg"></a>
+                    <a href="https://www.instagram.com/PokemonESP/" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./img/instagram (1).svg"></a>
+                    <a href="https://www.facebook.com/PokemonOficialES" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./img/facebook.svg"></a>
+                    <a href="https://www.youtube.com/@PokemonOficialES" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./img/youtube.svg"></a>
+                    <a href="https://www.twitch.tv/pokemon" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./img/twitch.svg"></a>
                 </div>
             </div>
             <!--NAVEGACION-->
@@ -101,7 +163,9 @@
                     <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2" >EU Privacy Rights</a>
                     <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/cookies-policy/" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Cookie Policy</a>
                     <a href="https://www.marvel.com/corporate/advertisings" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Manage Privacy Preferences</a>
-                    <p class="mb-0">©2026 POKEMON</p>
+                    <p class="mb-0">
+                        <a href="https://example.com" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon</a> © 2026 by <a href="https://example.com" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Nathan Sheila</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                    </p>
             </div>
         </div>
     </footer>
