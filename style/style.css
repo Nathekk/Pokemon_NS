@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'Pokemon';
-    src: url('../font/pokemon.ttf') format('truetype');
-}
-body, *, .navbar-brand, .form-control, .btn {
-    font-family: 'Pokemon', sans-serif !important;
-}
 :root {
 
   /* Amarrillo botones */
@@ -13,10 +6,16 @@ body, *, .navbar-brand, .form-control, .btn {
   --color-background-main: #ffffff;
   /* Azul footer y barra debajo header */
   --color-background-blue: #2f5098;
+    --color-background-footer: #2f5098;
+    /* Gris sidebar */
+    --color-background-sidebar: #c8cad0;
   /* Colores de texto */
   --color-text-dark: #111;
   --color-text-light: #ffffff;
-
+}
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../font/pokemon.ttf') format('truetype');
 }
 
 .colorbluenav{
@@ -26,6 +25,28 @@ body, *, .navbar-brand, .form-control, .btn {
     background-color: var(--color-background-blue);
     border-color: var(--color-background-blue);
     color: white;
+}
+/* ======================================= */
+/* 1. BODY */
+/* ======================================= */
+body, *, .navbar-brand, .form-control, .btn {
+    font-family: 'Pokemon', sans-serif !important;
+}
+
+/* ======================================= */
+/* 2. HEADER */
+/* ======================================= */
+#headerNavbar {
+    background-color: var(--color-background-footer);
+}
+.banner {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+    object-position: 30% 80%;
+}
+.search-bar{
+    border-radius: 40px;
 }
 
 
@@ -59,7 +80,58 @@ body, *, .navbar-brand, .form-control, .btn {
     border-color: var(--color-background-blue);
 }
 /* ======================================= */
-/* 3. FOOTER */
+/* 5. SIDEBAR */
+/* ======================================= */
+#comunidad h2{
+  color:var(--color-background-footer);
+}
+#comunidad ul{
+  list-style-type: none; /*BORRAR LOS PUNTOS DE LISTA */
+  color: var(--color-background-footer);
+}
+#comunidad img{
+  width: 30px;
+  height: auto;
+  border-radius: 100%;
+  border: 1px solid var(--color-background-footer);
+}
+#comunidad button{
+  background: var(--color-background-footer);
+  border: var(--color-background-footer);
+  width: 80%;
+
+}
+#comunidad{
+  background: var(--color-background-sidebar);
+  border-radius: 18px;
+}
+#noticias h2{
+  color:var(--color-background-footer);
+}
+#noticias{
+  background: var(--color-background-sidebar);
+  border-radius: 18px;
+}
+#noticias button{
+  background: var(--color-background-footer);
+  border: var(--color-background-footer);
+  width: 100%;
+
+}
+#noticias h5{
+  font-size: 18px;
+  font-style: oblique;
+}
+
+#noticias p{
+  font-size: 14px;
+}
+
+
+
+
+/* ======================================= */
+/* 6. FOOTER */
 /* ======================================= */
 footer {
   background-color: var(--color-background-blue);

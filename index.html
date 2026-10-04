@@ -7,7 +7,6 @@
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-
 </head>
 <body>
 <!--CONTENEDOR PRINCIPAL-->
@@ -225,104 +224,196 @@
         <div class="col-3 bg-white text-white">
             Barra Lateral
         </div>
+        <div class="row g-0">
+            <!--Columna Izq-->
+            <div class="col-3 bg-dark text-white">
+                Columna Izquierda
+            </div>
+            <!--FIN Columna Izquierda-->
+
+            <!--Contenido principal-->
+            <div class="col-7 bg-warning"> <!-- Cambiado a amarillo para imitar el fondo de la consola de tu ejemplo -->
+                Contenido Principal
+            </div>
+            <!--FIN contenido principal-->
+
+            <!--SIDEBAR-->
+            <div class="col-2 bg-white" id="sidebar">
+
+                <!--Comunidad-->
+                <div class="row pt-4 m-0 justify-content-center">
+                    <div class="col-10 mb-4" id="comunidad">
+                        <div class="pt-2 mt-2">
+                            <h2>Comunidad</h2>
+                        </div>
+                        <ul class="text-start">
+                            <li>
+                                <img src="./img/pikachu.png" alt="perfilPikachu"> Pikachu
+                            </li>
+                            <li>
+                                <img src="./img/charmander.png" alt="perfilPikachu"> Charmander
+                            </li>
+                        </ul>
+                        <div class="pb-2 mb-2">
+                            <button type="button" class="btn btn-primary">Unete</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin comunidad-->
+
+                <!--Noticias-->
+                <div class="row pt-4 m-0 mb-4 justify-content-center">
+                    <div class="col-10 mb-4 pb-2" id="noticias">
+                        <div class="pt-2 mt-2">
+                            <h2>Noticias</h2>
+                        </div>
+                        <form class="d-flex gap-1">
+                            <div class="mb-2">
+                                <input type="email" class="form-control" id="email" aria-describedby="email"
+                                       placeholder="Email">
+                            </div>
+                            <div class="mb-2">
+                                <button type="button" class="btn btn-primary">Suscribir</button>
+                            </div>
+                        </form>
+                        <!--Noticia pokopia-->
+                        <a href="https://www.pokemon.com/es/noticias/musica-de-pokemon-pokopia-para-estudiar-y-relajarse"
+                           target="_blank" class="text-decoration-none">
+                            <div class="card mb-3">
+                                <img src="./img/noticia-pokopia.avif" class="card-img-top" alt="Pokémon Pokopia">
+
+                                <div class="card-body text-start">
+                                    <h5 class="card-title">Música de Pokémon Pokopia para estudiar y relajarse</h5>
+                                    <p class="card-text">
+                                        Disfruta de una hora de música de Pokémon Pokopia pensada para estudiar,
+                                        relajarte y desconectar.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <!--Fin noticia pokopia-->
+                    </div>
+                </div>
+                <!--Fin noticias-->
+
+            </div>
+            <!--FIN SIDEBAR-->
+        </div>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="row py-4 m-0 px-0 justify-content-center flex-wrap flex-column flex-sm-row">
+                <!--ICONOS-->
+                <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3">
+                    <div class="row text-center flex-wrap mt-3 pt-3 me-2">
+                        <h4 id="tittle__footer"> FOLLOW POKEMON</h4>
+                    </div>
+                    <div id="footer__iconos" class="d-inline-flex justify-content-center gap-3 mb-4 mt-2 me-4">
+                        <a href="https://x.com/Pokemon_ES_ESP" class="btn btn-light" target="_blank"
+                           rel="noopener noreferrer"><img src="./img/twitter-x.svg">
+                        </a>
+                        <a href="https://www.instagram.com/PokemonESP/" class="btn btn-light" target="_blank"
+                           rel="noopener noreferrer"><img src="./img/instagram (1).svg"></a>
+                        <a href="https://www.facebook.com/PokemonOficialES" class="btn btn-light" target="_blank"
+                           rel="noopener noreferrer"><img src="./img/facebook.svg"></a>
+                        <a href="https://www.youtube.com/@PokemonOficialES" class="btn btn-light" target="_blank"
+                           rel="noopener noreferrer"><img src="./img/youtube.svg"></a>
+                        <a href="https://www.twitch.tv/pokemon" class="btn btn-light" target="_blank"
+                           rel="noopener noreferrer"><img src="./img/twitch.svg"></a>
+                    </div>
+                </div>
+                <!--NAVEGACION-->
+                <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3 pt-3 mt-2">
+                    <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon GO</a>
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon VGC</a>
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon JCC</a>
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon
+                            Unite </a>
+                    </div>
+                </div>
+                <!--ENLACES-->
+                <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3  pt-3 mt-2">
+                    <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">About Us</a>
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Advertising</a>
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+                           data-bs-toggle="modal" data-bs-target="#contactoModal">Contact Us</a>
+                        <a href="https://pokeapi.co/"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">FAQS</a>
+                    </div>
+                </div>
+                <!--LOGO-->
+                <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-4 pt-4 ms-2"
+                     id="footer__logo">
+                    <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
+                        <img src="./img/logoPokemon.webp" alt="logo_web"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row py-4 flex-wrap">
+                <div id="footer__copyright" class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                    <a href="https://disneytermsofuse.com/spanish/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Terms of Use</a>
+                    <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Privacy Policy</a>
+                    <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">EU Privacy
+                        Rights</a>
+                    <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/cookies-policy/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Cookie Policy</a>
+                    <a href="https://www.marvel.com/corporate/advertisings"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Manage Privacy
+                        Preferences</a>
+                    <p class="mb-0">
+                        <a href="https://example.com"
+                           class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon</a> ©
+                        2026 by <a href="https://example.com"
+                                   class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Nathan
+                        Sheila</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                                                        class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">CC
+                        BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+                                             style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+                            src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+                            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+                            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt=""
+                            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+                            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
+                            style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- CIERRE FOOTER-->
+
+        <!-- INFO DE CONTACTO FOOTER-->
+        <div class="modal fade" id="contactoModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contacto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Email:</strong> soporte@pokemon.com</p>
+                        <p><strong>Teléfono:</strong> +34 900 123 456</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CIERRE INFO DE CONTACTO FOOTER-->
     </div>
-
-    <!--FOOTER-->
-    <footer class="footer">
-        <div class="row py-4 m-0 px-0 justify-content-center flex-wrap flex-column flex-sm-row">
-            <!--ICONOS-->
-            <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3">
-                <div class="row text-center flex-wrap mt-3 pt-3 me-2">
-                    <h4 id="tittle__footer"> FOLLOW POKEMON</h4>
-                </div>
-                <div id="footer__iconos" class="d-inline-flex justify-content-center gap-3 mb-4 mt-2 me-4">
-                    <a href="https://twitter.com/marvel" class="btn btn-light" target="_blank"
-                       rel="noopener noreferrer"><img src="./assets/twitter-x.svg">
-                    </a>
-                    <a href="https://www.instagram.com/marvel" class="btn btn-light" target="_blank"
-                       rel="noopener noreferrer"><img src="./assets/instagram (1).svg"></a>
-                    <a href="https://www.facebook.com/marvel" class="btn btn-light" target="_blank"
-                       rel="noopener noreferrer"><img src="./assets/facebook.svg"></a>
-                    <a href="https://www.youtube.com/marvel" class="btn btn-light" target="_blank"
-                       rel="noopener noreferrer"><img src="./assets/youtube.svg"></a>
-                    <a href="https://discord.gg/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img
-                            src="./assets/discord.svg"></a>
-                </div>
-            </div>
-            <!--NAVEGACION-->
-            <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3 pt-3 mt-2">
-                <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon GO</a>
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon VGC</a>
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon JCC</a>
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon Unite </a>
-                </div>
-            </div>
-            <!--ENLACES-->
-            <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3  pt-3 mt-2">
-                <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">About Us</a>
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Advertising</a>
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
-                       data-bs-toggle="modal" data-bs-target="#contactoModal">Contact Us</a>
-                    <a href="https://pokeapi.co/"
-                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">FAQS</a>
-                </div>
-            </div>
-            <!--LOGO-->
-            <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-4 pt-4 ms-2"
-                 id="footer__logo">
-                <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
-                    <img src="./img/logoPokemon.webp" alt="logo_web"/>
-                </div>
-
-            </div>
-        </div>
-        <div class="row py-4 flex-wrap">
-            <div id="footer__copyright" class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
-                <a href="https://disneytermsofuse.com/spanish/"
-                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Terms of Use</a>
-                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/"
-                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Privacy Policy</a>
-                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/"
-                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">EU Privacy Rights</a>
-                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/cookies-policy/"
-                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Cookie Policy</a>
-                <a href="https://www.marvel.com/corporate/advertisings"
-                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Manage Privacy
-                    Preferences</a>
-                <p class="mb-0">©2026 POKEMON</p>
-            </div>
-        </div>
-    </footer>
-    <!-- CIERRE FOOTER-->
-
-    <!-- INFO DE CONTACTO FOOTER-->
-    <div class="modal fade" id="contactoModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Contacto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Email:</strong> soporte@pokemon.com</p>
-                    <p><strong>Teléfono:</strong> +34 900 123 456</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CIERRE INFO DE CONTACTO FOOTER-->
 </div>
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
