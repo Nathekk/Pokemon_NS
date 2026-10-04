@@ -8,7 +8,7 @@
     --color-background-blue: #2f5098;
     --color-background-footer: #2f5098;
     /* Gris sidebar */
-    --color-background-sidebar: #c8cad0;
+    --color-background-sidebar: #e5e6e9; /* GRIS CLARO: #e5e6e9 */
     /* Colores de texto */
     --color-text-dark: #111;
     --color-text-light: #ffffff;
@@ -115,57 +115,72 @@ body, *, .navbar-brand, .form-control, .btn {
 /* ======================================= */
 /* 5. SIDEBAR */
 /* ======================================= */
+#comunidad {
+    background: white;
+    border: 2px solid #2f5098;
+    border-radius: 18px;
+}
+
 #comunidad h2 {
-    color: var(--color-background-footer);
+    color: #2f5098;
 }
 
 #comunidad ul {
-    list-style-type: none; /*BORRAR LOS PUNTOS DE LISTA */
-    color: var(--color-background-footer);
+    list-style-type: none;
+    color: #2f5098;
 }
 
 #comunidad img {
     width: 30px;
     height: auto;
     border-radius: 100%;
-    border: 1px solid var(--color-background-footer);
+    border: 1px solid #2f5098;
 }
 
 #comunidad button {
-    background: var(--color-background-footer);
-    border: var(--color-background-footer);
+    background: #2f5098;
+    border: 2px solid #2f5098;
     width: 80%;
-
+    color: white;
 }
 
-#comunidad {
-    background: var(--color-background-sidebar);
+#noticias {
+    background: white;
+    border: 2px solid #2f5098;
     border-radius: 18px;
 }
 
 #noticias h2 {
-    color: var(--color-background-footer);
+    color: #2f5098;
 }
 
-#noticias {
-    background: var(--color-background-sidebar);
-    border-radius: 18px;
+#noticias input {
+    border: 2px solid #2f5098;
+    color: #2f5098;
 }
 
 #noticias button {
-    background: var(--color-background-footer);
-    border: var(--color-background-footer);
+    background: #2f5098;
+    border: 2px solid #2f5098;
     width: 100%;
+    color: white;
+}
 
+#noticias .card {
+    border: 1px solid rgb(221, 212, 212);
 }
 
 #noticias h5 {
     font-size: 18px;
-    font-style: oblique;
+    font-style: oblique;;
 }
 
 #noticias p {
     font-size: 14px;
+}
+
+#noticias input::placeholder {
+    color: #2f5098;
 }
 
 
