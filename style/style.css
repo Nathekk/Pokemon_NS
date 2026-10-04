@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../font/pokemon.ttf') format('truetype');
+}
+body, *, .navbar-brand, .form-control, .btn {
+    font-family: 'Pokemon', sans-serif !important;
+}
 :root {
 
   /* Amarrillo botones */
@@ -5,22 +12,57 @@
   /* Fondo de la página */
   --color-background-main: #ffffff;
   /* Azul footer y barra debajo header */
-  --color-background-footer: #3A5DA9;
+  --color-background-blue: #2f5098;
   /* Colores de texto */
   --color-text-dark: #111;
   --color-text-light: #ffffff;
-@font-face {
-    font-family: 'Pokemon';
-    src: url('../font/pokemon.ttf') format('truetype');
-}
 
 }
 
+.colorbluenav{
+    background-color: var(--color-background-blue);
+}
+.colorblue {
+    background-color: var(--color-background-blue);
+    border-color: var(--color-background-blue);
+    color: white;
+}
+
+
+.colorblue:hover {
+    background-color: #426cc9;
+    border-color: #426cc9;
+    color: white;
+}
+.textblue{
+    color: var(--color-background-blue);
+}
+
+.coloramarrilo:hover{
+    background-color: #d5412e;
+    border-color: #d5412e;
+    color: white;
+}
+
+.coloramarrilo{
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-background-blue);
+}
+
+.form-check-input {
+    border: 1px solid var(--color-background-blue);
+}
+
+.form-check-input:checked {
+    background-color: var(--color-background-blue);
+    border-color: var(--color-background-blue);
+}
 /* ======================================= */
 /* 3. FOOTER */
 /* ======================================= */
 footer {
-  background-color: var(--color-background-footer);
+  background-color: var(--color-background-blue);
   color: var(--color-text-light);
   display: block;
 }
@@ -31,7 +73,6 @@ footer {
 
 }
 #tittle__footer {
-  font-style: bold;
   letter-spacing: 2px;
   font-size: 14px;
   text-transform: uppercase;
@@ -40,9 +81,6 @@ footer {
   font-size: 12px;
   text-decoration: none;
   line-height: 1.2em;
-}
-body, *, .navbar-brand, .form-control, .btn {
-    font-family: 'Pokemon', sans-serif !important;
 }
 
 .banner {
@@ -53,4 +91,10 @@ body, *, .navbar-brand, .form-control, .btn {
 }
 .search-bar{
     border-radius: 40px;
+}
+.ds-screen {
+    height: 20em;
+}
+.ds-screen-bottom {
+    height: 17em;
 }

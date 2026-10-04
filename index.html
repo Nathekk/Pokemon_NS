@@ -7,46 +7,222 @@
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
 <!--CONTENEDOR PRINCIPAL-->
 
-<!-- container-fluid elimina los márgenes laterales del contenedor -->
-<div class="container-fluid text-center p-0 bg-primary">
+<div class="container-fluid p-0 colorbluenav">
 
     <!-- HEADER -->
     <div class="row g-0">
         <div class="col-12 bg-success">
-            <img src="img/bannerPokemon.jpg" class="img-fluid banner" alt="bannerPokemon">
+            <div class="col-12 bg-success position-relative d-inline-block">
+                <img src="img/bannerPokemon.jpg" class="img-fluid banner" alt="bannerPokemon">
+                <img src="img/logoPokemon.webp" class="position-absolute top-50 start-50 translate-middle" alt="Encima"
+                     style="width: 30%;">
+
+            </div>
         </div>
 
     </div>
 
     <!-- NAV LARGO Y FINO -->
-    <nav class="container ">
-        <div class="row justify-content-center m-3">
-            <div class="col-md-6">
+    <nav class="container-fluid p-0 w-75">
+        <div class="row g-0 align-items-center my-3">
+
+            <!-- Buscador -->
+            <div class="col-6 offset-3">
                 <form class="d-flex">
                     <div class="input-group">
-                        <input class="form-control form-control-lg search-bar" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn px-4 search-bar bg-white"  type="submit">
+                        <input
+                                class="form-control form-control-lg search-bar"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                        >
+
+                        <button
+                                class="btn px-4 search-bar bg-white"
+                                type="submit"
+                        >
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
                 </form>
             </div>
+
+            <!-- Audio -->
+            <div class="col-3 d-flex justify-content-end pe-4">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="musicToggle"
+                    >
+
+                    <label class="form-check-label text-white" for="musicToggle">
+                        Musica
+                    </label>
+                </div>
+            </div>
+
         </div>
+
+        <audio id="backgroundMusic" loop>
+            <source src="music/pokemon.mp3" type="audio/mpeg">
+        </audio>
     </nav>
 
     <!-- PRINCIPALES -->
-    <div class="row g-0">
-        <div class="col-3 bg-dark text-white">
-            Columna Izquierda
+    <div class="row g-0 ">
+        <div class="col-3 bg-white text-white ">
+            <div class="container mt-5 mb-5 fs-4">
+                <div class="row">
+                    <div class="col-md-8 ">
+                        <form>
+                            <ul class="list-group ms-3">
+                                <li class="list-group-item border-end-0 border-start-0 border-top-0 textblue ">
+                                    <!--                    CHECKBOX DE TIPOS DE POKEMON-->
+                                    <h2 class="fw-bold ">Filtrar por:</h2>
+                                    <hr>
+
+                                    <h3>Tipos</h3>
+                                <li class="list-group-item border-end-0 border-start-0 textblue">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="acero">
+                                        <label class="form-check-label" for="acero">
+                                            Acero
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-end-0 border-start-0 textblue">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="agua">
+                                        <label class="form-check-label" for="agua">
+                                            Agua
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-end-0 border-start-0 textblue">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="dragon">
+                                        <label class="form-check-label" for="dragon">
+                                            Dragón
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-end-0 border-start-0 border-bottom-0 textblue">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="electrico">
+                                        <label class="form-check-label" for="electrico">
+                                            Eléctrico
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <!--                FILTROS DE SELECCIONAR TIPO SE EXTIENDE-->
+
+                                <li class="list-group-item border-0 ">
+                                    <hr class="textblue">
+
+
+                                    <select class="form-select form-select border-0 textblue fs-4"
+                                            aria-label="Generacion">
+                                        <option selected>Generación</option>
+                                        <option value="1">Generacion 1</option>
+                                        <option value="2">Generacion 2</option>
+                                        <option value="3">Generacion 3</option>
+                                        <option value="4">Generacion 4</option>
+                                        <option value="5">Generacion 5</option>
+                                        <option value="6">Generacion 6</option>
+                                        <option value="7">Generacion 7</option>
+                                        <option value="8">Generacion 8</option>
+                                        <option value="9">Generacion 9</option>
+                                        <option value="10">Generacion 10</option>
+                                    </select>
+                                </li>
+
+                                <li class="list-group-item border-0">
+
+                                    <select class="form-select form-select border-0 textblue fs-4" aria-label="Region">
+                                        <option selected>Región</option>
+                                        <option value="Kanto">Kanto</option>
+                                        <option value="Johto">Johto</option>
+                                        <option value="Hoenn">Hoenn</option>
+                                        <option value="Sinnoh">Sinnoh</option>
+                                        <option value="Teselia">Teselia/Unova</option>
+                                        <option value="Kalos">Kalos</option>
+                                        <option value="Galar">Galar</option>
+                                        <option value="Paldea">Paldea</option>
+                                    </select>
+                                </li>
+
+                                <li class="list-group-item border-0">
+
+                                    <select class="form-select form-select border-0 textblue fs-4"
+                                            aria-label="Evolucion">
+                                        <option selected>Evolución</option>
+                                        <option value="Ninguna">Ninguna</option>
+                                        <option value="Primera">Primera</option>
+                                        <option value="Segunda">Segunda</option>
+                                        <option value="Tercera">Tercera</option>
+                                    </select>
+                                </li>
+
+                                <li class="list-group-item border-0">
+                                    <select class="form-select form-select border-0 textblue fs-4"
+                                            aria-label="Legendario">
+                                        <option selected>Legendario</option>
+                                        <option value="Si">Si</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </li>
+                                <li class="mt-4">
+                                    <button type="submit" class="btn colorblue text-white">Aplicar filtros</button>
+                                    <button type="reset" class="btn coloramarrilo">Resetear filtros</button>
+
+                                </li>
+
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="col-6 bg-warning"> <!-- Cambiado a amarillo para imitar el fondo de la consola de tu ejemplo -->
-            Contenido Principal
+        <div class="col-6 bg-white">
+            <div class="col-12 bg-white d-flex justify-content-center align-items-start py-5">
+
+                <!--NINTENDO 3DS-->
+                <div class="w-75">
+                    <div class="bg-info-subtle border border-2 border-info rounded-top-4 shadow px-3 py-4">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <!--Pantalla superior-->
+                            <div class="col-8">
+                                <div class="bg-info p-2 rounded-2">
+                                    <div class="bg-white rounded-1 d-flex flex-column justify-content-center align-items-center ds-screen">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--BISAGRA-->
+                    <div class="bg-info py-2 border-top border-bottom border-2 border-info-subtle"></div>
+                    <div class="bg-info-subtle border border-2 border-info rounded-bottom-4 shadow px-3 py-4">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <!--Pantalla inferior-->
+                            <div class="col-7">
+                                <div class="bg-info p-2 rounded-2">
+                                    <div class="bg-white rounded-1 ds-screen-bottom"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="col-3 bg-dark text-white">
+        <div class="col-3 bg-white text-white">
             Barra Lateral
         </div>
     </div>
@@ -60,34 +236,49 @@
                     <h4 id="tittle__footer"> FOLLOW POKEMON</h4>
                 </div>
                 <div id="footer__iconos" class="d-inline-flex justify-content-center gap-3 mb-4 mt-2 me-4">
-                    <a href="https://twitter.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/twitter-x.svg">
+                    <a href="https://twitter.com/marvel" class="btn btn-light" target="_blank"
+                       rel="noopener noreferrer"><img src="./assets/twitter-x.svg">
                     </a>
-                    <a href="https://www.instagram.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/instagram (1).svg"></a>
-                    <a href="https://www.facebook.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/facebook.svg"></a>
-                    <a href="https://www.youtube.com/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/youtube.svg"></a>
-                    <a href="https://discord.gg/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img src="./assets/discord.svg"></a>
+                    <a href="https://www.instagram.com/marvel" class="btn btn-light" target="_blank"
+                       rel="noopener noreferrer"><img src="./assets/instagram (1).svg"></a>
+                    <a href="https://www.facebook.com/marvel" class="btn btn-light" target="_blank"
+                       rel="noopener noreferrer"><img src="./assets/facebook.svg"></a>
+                    <a href="https://www.youtube.com/marvel" class="btn btn-light" target="_blank"
+                       rel="noopener noreferrer"><img src="./assets/youtube.svg"></a>
+                    <a href="https://discord.gg/marvel" class="btn btn-light" target="_blank" rel="noopener noreferrer"><img
+                            src="./assets/discord.svg"></a>
                 </div>
             </div>
             <!--NAVEGACION-->
             <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3 pt-3 mt-2">
                 <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon GO</a>
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon VGC</a>
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon JCC</a>
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon Unite </a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon GO</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon VGC</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon JCC</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Pokemon Unite </a>
                 </div>
             </div>
             <!--ENLACES-->
             <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-3  pt-3 mt-2">
                 <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">About Us</a>
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Advertising</a>
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1" data-bs-toggle="modal" data-bs-target="#contactoModal" >Contact Us</a>
-                    <a href="https://pokeapi.co/" class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">FAQS</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">About Us</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">Advertising</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+                       data-bs-toggle="modal" data-bs-target="#contactoModal">Contact Us</a>
+                    <a href="https://pokeapi.co/"
+                       class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1">FAQS</a>
                 </div>
             </div>
             <!--LOGO-->
-            <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-4 pt-4 ms-2" id="footer__logo">
+            <div class="col-12 col-md-2 col-lg-2 d-flex flex-column align-items-center mb-4 pt-4 ms-2"
+                 id="footer__logo">
                 <div class="d-flex flex-column mb-3 align-items-center flex-wrap">
                     <img src="./img/logoPokemon.webp" alt="logo_web"/>
                 </div>
@@ -95,13 +286,19 @@
             </div>
         </div>
         <div class="row py-4 flex-wrap">
-            <div  id="footer__copyright"class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
-                    <a href="https://disneytermsofuse.com/spanish/" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Terms of Use</a>
-                    <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Privacy Policy</a>
-                    <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2" >EU Privacy Rights</a>
-                    <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/cookies-policy/" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Cookie Policy</a>
-                    <a href="https://www.marvel.com/corporate/advertisings" class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Manage Privacy Preferences</a>
-                    <p class="mb-0">©2026 POKEMON</p>
+            <div id="footer__copyright" class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                <a href="https://disneytermsofuse.com/spanish/"
+                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Terms of Use</a>
+                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/"
+                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Privacy Policy</a>
+                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/"
+                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">EU Privacy Rights</a>
+                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/cookies-policy/"
+                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Cookie Policy</a>
+                <a href="https://www.marvel.com/corporate/advertisings"
+                   class="link-light link-offset-2 link-underline link-underline-opacity-0 p-2">Manage Privacy
+                    Preferences</a>
+                <p class="mb-0">©2026 POKEMON</p>
             </div>
         </div>
     </footer>
@@ -127,7 +324,7 @@
     </div>
     <!-- CIERRE INFO DE CONTACTO FOOTER-->
 </div>
-
+<script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
