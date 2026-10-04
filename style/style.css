@@ -112,6 +112,93 @@ body, *, .navbar-brand, .form-control, .btn {
     display: block;
 }
 
+/* CRUCETA (FLECHITAS)*/
+.ds-dpad { /* CONTENEDOR */
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.ds-dpad::before {  /* esto dibuja la cruz del fondo blanco */
+    content: ""; 
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    border: 2px solid #0dcaf0;
+    clip-path: polygon(33% 0, 67% 0, 67% 33%, 100% 33%, 100% 67%, 67% 67%,
+    67% 100%, 33% 100%, 33% 67%, 0 67%, 0 33%, 33% 33%);
+    /* clip-path recorta el cuadrado hasta dejarlo en forma de "+" */
+}
+
+.ds-dpad-btn {  /* cada flecha individual transparente encima de la cruz creada antes */
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    border: 0;
+    background: transparent; 
+    color: #0dcaf0;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.ds-dpad-btn:active { color: #087990; }
+
+/* posiciones d ecads flecha  */
+.ds-dpad-btn.up    { top: 0;    left: 27px; }
+.ds-dpad-btn.down  { bottom: 0; left: 27px; }
+.ds-dpad-btn.left  { left: 0;   top: 27px; }
+.ds-dpad-btn.right { right: 0;  top: 27px; }
+
+/* BOTONES: X,Y,A,B */
+.ds-abxy { /* conetendor*/
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.ds-btn { /* cada boton individual */
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #0dcaf0;
+    background: #fff;
+    color: #0dcaf0;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ds-btn:active { background: #cff4fc; }
+
+/* posiciones d ecads boton  */
+.ds-btn.x { top: 0;    left: 27px; }
+.ds-btn.y { top: 27px; left: 0; }
+.ds-btn.a { top: 27px; right: 0; }
+.ds-btn.b { bottom: 0; left: 27px; }
+
+/* START y SELECT */
+.ds-startselect {  /* contenedor */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 8px;
+    font-weight: bold;
+    color: #0dcaf0;
+}
+
+.ds-dot { /* circulito decorativo */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    border-radius: 50%;
+    border: 2px solid #0dcaf0;
+    background: #fff;
+    vertical-align: middle;
+}
+
 /* ======================================= */
 /* 5. SIDEBAR */
 /* ======================================= */
