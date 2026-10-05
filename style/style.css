@@ -87,11 +87,12 @@ body, *, .navbar-brand, .form-control, .btn {
 }
 
 /* NINTENDO DS */
-#pokedexCarousel img{
+#pokedexCarousel img {
     width: 100%;
     height: 250px;
     object-fit: contain;
 }
+
 #pokedexCarousel .carousel-control-prev-icon,
 #pokedexCarousel .carousel-control-next-icon {
     background-color: var(--color-background-footer);
@@ -99,6 +100,7 @@ body, *, .navbar-brand, .form-control, .btn {
     padding: 20px;
     background-size: 60%;
 }
+
 #scrollPokemon {
     height: 100%;
     max-height: 280px;
@@ -119,8 +121,8 @@ body, *, .navbar-brand, .form-control, .btn {
     height: 80px;
 }
 
-.ds-dpad::before {  /* esto dibuja la cruz del fondo blanco */
-    content: ""; 
+.ds-dpad::before { /* esto dibuja la cruz del fondo blanco */
+    content: "";
     position: absolute;
     inset: 0;
     background: #fff;
@@ -130,25 +132,42 @@ body, *, .navbar-brand, .form-control, .btn {
     /* clip-path recorta el cuadrado hasta dejarlo en forma de "+" */
 }
 
-.ds-dpad-btn {  /* cada flecha individual transparente encima de la cruz creada antes */
+.ds-dpad-btn { /* cada flecha individual transparente encima de la cruz creada antes */
     position: absolute;
     width: 27px;
     height: 27px;
     padding: 0;
     border: 0;
-    background: transparent; 
+    background: transparent;
     color: #0dcaf0;
     font-size: 14px;
     line-height: 27px;
 }
 
-.ds-dpad-btn:active { color: #087990; }
+.ds-dpad-btn:active {
+    color: #087990;
+}
 
 /* posiciones d ecads flecha  */
-.ds-dpad-btn.up    { top: 0;    left: 27px; }
-.ds-dpad-btn.down  { bottom: 0; left: 27px; }
-.ds-dpad-btn.left  { left: 0;   top: 27px; }
-.ds-dpad-btn.right { right: 0;  top: 27px; }
+.ds-dpad-btn.up {
+    top: 0;
+    left: 27px;
+}
+
+.ds-dpad-btn.down {
+    bottom: 0;
+    left: 27px;
+}
+
+.ds-dpad-btn.left {
+    left: 0;
+    top: 27px;
+}
+
+.ds-dpad-btn.right {
+    right: 0;
+    top: 27px;
+}
 
 /* BOTONES: X,Y,A,B */
 .ds-abxy { /* conetendor*/
@@ -170,16 +189,33 @@ body, *, .navbar-brand, .form-control, .btn {
     font-weight: bold;
 }
 
-.ds-btn:active { background: #cff4fc; }
+.ds-btn:active {
+    background: #cff4fc;
+}
 
 /* posiciones d ecads boton  */
-.ds-btn.x { top: 0;    left: 27px; }
-.ds-btn.y { top: 27px; left: 0; }
-.ds-btn.a { top: 27px; right: 0; }
-.ds-btn.b { bottom: 0; left: 27px; }
+.ds-btn.x {
+    top: 0;
+    left: 27px;
+}
+
+.ds-btn.y {
+    top: 27px;
+    left: 0;
+}
+
+.ds-btn.a {
+    top: 27px;
+    right: 0;
+}
+
+.ds-btn.b {
+    bottom: 0;
+    left: 27px;
+}
 
 /* START y SELECT */
-.ds-startselect {  /* contenedor */
+.ds-startselect { /* contenedor */
     display: flex;
     flex-direction: column;
     gap: 6px;
